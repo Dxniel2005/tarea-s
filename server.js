@@ -1,3 +1,6 @@
+// Guardar la informacion del chat.
+// hola xsd
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
