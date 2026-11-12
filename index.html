@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sura AI - Copiloto de Bienestar Académico</title>
+    <title>bot-n/a - proyecto n/a</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome CDN for Icons -->
@@ -153,15 +153,15 @@
                     <i class="fa-solid fa-brain"></i>
                 </div>
                 <div>
-                    <span class="text-xl font-bold tracking-tight text-white">Sura <span class="text-mint-500">AI</span></span>
-                    <span class="text-xs text-mint-400 block -mt-1 font-medium">Copiloto de Bienestar Académico</span>
+                    <span class="text-xl font-bold tracking-tight text-white">bot<span class="text-mint-500">-n/a</span></span>
+                    <span class="text-xs text-mint-400 block -mt-1 font-medium">proyecto n/a</span>
                 </div>
             </div>
 
             <!-- Navigation Tabs -->
             <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-xl border border-slate-700/50">
                 <button onclick="switchTab('assistant')" id="nav-assistant" class="px-4 py-2 rounded-lg text-sm font-medium transition-all bg-mint-600 text-slate-900 font-semibold shadow">
-                    <i class="fa-solid fa-microphone-lines mr-2"></i>Asistente Sura
+                    <i class="fa-solid fa-microphone-lines mr-2"></i>Asistente bot-n/a
                 </button>
                 <button onclick="switchTab('deconstruct')" id="nav-deconstruct" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-all">
                     <i class="fa-solid fa-list-check mr-2"></i>Desglose Anti-Caos
@@ -184,7 +184,7 @@
         <!-- Mobile Navigation Bar -->
         <div class="md:hidden flex justify-around bg-slate-900/90 border-t border-slate-800 py-2 px-1">
             <button onclick="switchTab('assistant')" class="flex flex-col items-center text-xs text-mint-400 font-medium">
-                <i class="fa-solid fa-microphone-lines text-base mb-1"></i>Sura
+                <i class="fa-solid fa-microphone-lines text-base mb-1"></i>bot-n/a
             </button>
             <button onclick="switchTab('deconstruct')" class="flex flex-col items-center text-xs text-slate-400 hover:text-mint-400">
                 <i class="fa-solid fa-list-check text-base mb-1"></i>Desglose
@@ -205,8 +205,10 @@
         <section id="tab-assistant" class="space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 
+                <!-- Columna del avatar: tarjeta + panel de ayuda -->
+                <div class="lg:col-span-5 space-y-4">
                 <!-- Avatar Card -->
-                <div class="lg:col-span-5 bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-xl relative overflow-hidden">
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-xl relative overflow-hidden">
                     <div class="absolute -top-10 -left-10 w-40 h-40 bg-mint-500/10 rounded-full blur-3xl pointer-events-none"></div>
                     
                     <span class="text-xs uppercase tracking-widest text-mint-400 font-semibold mb-4 bg-mint-500/10 px-3 py-1 rounded-full border border-mint-500/20">
@@ -220,14 +222,14 @@
                         </div>
                     </div>
 
-                    <h2 id="sura-state-title" class="text-xl font-bold text-white mb-1">Sura está lista</h2>
+                    <h2 id="sura-state-title" class="text-xl font-bold text-white mb-1">bot-n/a está listo</h2>
                     <p id="sura-state-desc" class="text-xs text-slate-400 max-w-xs mb-6">Presiona el micrófono o escribe para conversar y aliviar la carga universitaria.</p>
 
                     <!-- Voice Interaction Controls -->
                     <div class="flex items-center gap-3 w-full justify-center">
                         <button id="mic-btn" onclick="toggleMic()" class="px-5 py-3 rounded-xl bg-mint-500 hover:bg-mint-400 text-slate-900 font-semibold flex items-center gap-2 shadow-lg shadow-mint-500/25 transition-all active:scale-95">
                             <i class="fa-solid fa-microphone text-lg"></i>
-                            <span id="mic-btn-text">Hablar con Sura</span>
+                            <span id="mic-btn-text">Hablar con bot-n/a</span>
                         </button>
                         <button onclick="stopVoice()" class="p-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-300 transition-all" title="Silenciar Voz">
                             <i class="fa-solid fa-volume-xmark"></i>
@@ -249,6 +251,55 @@
                             </button>
                         </div>
                     </div>
+
+                    <!-- MÓDULO 2: Panel de personalización -->
+                    <div id="customize-panel" class="mt-6 pt-6 border-t border-slate-700/60 w-full text-left">
+                        <span class="text-xs text-slate-400 block mb-3 font-medium"><i class="fa-solid fa-sliders text-mint-400 mr-1"></i> Personaliza a bot-n/a</span>
+
+                        <label for="voice-select" class="text-xs text-slate-500 block mb-1">Voz</label>
+                        <select id="voice-select" class="w-full bg-slate-900/90 border border-slate-700 focus:border-mint-500 focus:ring-1 focus:ring-mint-500 rounded-xl px-3 py-2 text-sm text-white outline-none transition-all mb-4">
+                            <option value="female">Femenina (Gentil)</option>
+                            <option value="male">Masculina (Cálida)</option>
+                        </select>
+
+                        <span class="text-xs text-slate-500 block mb-2">Avatar</span>
+                        <div id="avatar-options" class="flex flex-wrap gap-2">
+                            <button type="button" data-avatar="fa-sparkles" onclick="changeAvatar('fa-sparkles')" title="Destellos" aria-label="Avatar destellos" class="w-10 h-10 rounded-xl border border-mint-500 bg-mint-500/10 text-mint-400 hover:border-mint-500 hover:text-mint-400 transition-all">
+                                <i class="fa-solid fa-sparkles"></i>
+                            </button>
+                            <button type="button" data-avatar="fa-robot" onclick="changeAvatar('fa-robot')" title="Robot" aria-label="Avatar robot" class="w-10 h-10 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 hover:border-mint-500 hover:text-mint-400 transition-all">
+                                <i class="fa-solid fa-robot"></i>
+                            </button>
+                            <button type="button" data-avatar="fa-brain" onclick="changeAvatar('fa-brain')" title="Cerebro" aria-label="Avatar cerebro" class="w-10 h-10 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 hover:border-mint-500 hover:text-mint-400 transition-all">
+                                <i class="fa-solid fa-brain"></i>
+                            </button>
+                            <button type="button" data-avatar="fa-ghost" onclick="changeAvatar('fa-ghost')" title="Fantasma" aria-label="Avatar fantasma" class="w-10 h-10 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 hover:border-mint-500 hover:text-mint-400 transition-all">
+                                <i class="fa-solid fa-ghost"></i>
+                            </button>
+                            <button type="button" data-avatar="fa-heart" onclick="changeAvatar('fa-heart')" title="Corazón" aria-label="Avatar corazón" class="w-10 h-10 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 hover:border-mint-500 hover:text-mint-400 transition-all">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+</div>
+
+                <!-- MÓDULO 3: Panel de ayuda (se muestra solo si el modelo detecta una crisis) -->
+                <div id="emergency-help-panel" class="hidden">
+                    <div role="alert" class="bg-rose-950/70 border border-rose-500/40 rounded-2xl p-5 shadow-xl shadow-rose-900/20 text-left">
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-rose-500/20 text-rose-300 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-rose-100 text-sm">No estás solo</h3>
+                                <p class="text-xs text-rose-200/80 mt-1">No estás solo ni sola en esto. Hay personas que quieren escucharte y acompañarte ahora mismo, y pedir ayuda es un acto de valentía.</p>
+                                <button type="button" onclick="showHelpModal()" class="mt-3 px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-400 text-white text-sm font-semibold shadow-lg shadow-rose-900/30 transition-all active:scale-95">
+                                    <i class="fa-solid fa-life-ring mr-1"></i> Ver líneas de apoyo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Chat Box Area -->
@@ -294,7 +345,7 @@
                         Desglose Inteligente de Tareas
                     </span>
                     <h2 class="text-2xl font-bold text-white mt-2">Transforma el caos en pasos ejecutables</h2>
-                    <p class="text-slate-400 text-sm mt-1">Escribe la entrega pesada o proyecto que te genera estrés y Sura lo dividirá en micro-metas lógicas con tiempo estimado.</p>
+                    <p class="text-slate-400 text-sm mt-1">Escribe la entrega pesada o proyecto que te genera estrés y bot-n/a lo dividirá en micro-metas lógicas con tiempo estimado.</p>
                 </div>
 
                 <!-- Form to input giant task -->
@@ -430,8 +481,35 @@
 
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-slate-800 py-4 text-center text-xs text-slate-500">
-        <p>Prototipo Funcional "Sura AI" - Taller Práctico de Tecnologías Emergentes © 2026</p>
+        <p>Prototipo Funcional "bot-n/a" - Taller Práctico de Tecnologías Emergentes © 2026</p>
     </footer>
+
+    <!-- MÓDULO 3: Modal de líneas de apoyo -->
+    <div id="help-modal" class="hidden fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-labelledby="help-modal-title">
+        <div class="min-h-full flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onclick="if (event.target === this) closeHelpModal()">
+            <div class="relative w-full max-w-md bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-2xl">
+                <button id="help-modal-close" type="button" onclick="closeHelpModal()" aria-label="Cerrar" class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 transition-all">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="w-11 h-11 rounded-xl bg-rose-500/20 text-rose-300 flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-heart-pulse text-lg"></i>
+                </div>
+                <h2 id="help-modal-title" class="text-xl font-bold text-white mb-2">Lo que sientes importa</h2>
+                <p class="text-sm text-slate-300 mb-5">Pedir ayuda es un acto de valentía, y no tienes que cargar con esto en soledad. Hay personas listas para escucharte ahora mismo, sin juzgarte. Da un paso pequeño: habla con alguien de confianza o con un profesional.</p>
+
+                <div class="space-y-3">
+                    <!-- Cambia 911 por el número de emergencias de tu país (p. ej. 112 en España, 123 en Colombia) -->
+                    <a href="tel:911" class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-rose-500 hover:bg-rose-400 text-white font-semibold shadow-lg shadow-rose-900/30 transition-all">
+                        <i class="fa-solid fa-phone"></i> Llamar al 911 (emergencias)
+                    </a>
+                    <a href="https://findahelpline.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-mint-500 hover:bg-mint-400 text-slate-900 font-semibold shadow-lg shadow-mint-500/25 transition-all">
+                        <i class="fa-solid fa-earth-americas"></i> Encontrar una línea de ayuda en tu país
+                    </a>
+                </div>
+                <p class="text-xs text-slate-500 mt-4">Si estás en peligro inmediato, llama a emergencias. El 911 es un número genérico: si tu país usa otro, marca el que corresponda.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
@@ -443,6 +521,8 @@
         let pomoInterval = null;
         let breathingInterval = null;
         let isBreathingActive = false;
+        let selectedVoiceGender = 'female'; // 'female' | 'male' (se cambia con #voice-select)
+        let currentAvatarIcon = 'fa-sparkles'; // ícono del orbe cuando está en reposo
 
         // Web Speech API Initialization
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -462,16 +542,16 @@
             recognition.onstart = () => {
                 isListening = true;
                 voiceHandled = false;
-                updateOrbState('listening', 'Sura está escuchando...', 'Habla con naturalidad...');
+                updateOrbState('listening', 'bot-n/a está escuchando...', 'Habla con naturalidad...');
                 document.getElementById('mic-btn-text').innerText = 'Escuchando...';
             };
 
             recognition.onend = () => {
                 isListening = false;
-                document.getElementById('mic-btn-text').innerText = 'Hablar con Sura';
-                // Solo volver a "lista" si no hubo error/resultado y Sura no está hablando
+                document.getElementById('mic-btn-text').innerText = 'Hablar con bot-n/a';
+                // Solo volver a "lista" si no hubo error/resultado y bot-n/a no está hablando
                 if (!voiceHandled && !isSpeaking) {
-                    updateOrbState('calm', 'Sura está lista', 'No escuché nada. Presiona el micrófono e inténtalo de nuevo.');
+                    updateOrbState('calm', 'bot-n/a está listo', 'No escuché nada. Presiona el micrófono e inténtalo de nuevo.');
                 }
             };
 
@@ -503,27 +583,91 @@
             document.getElementById('voice-status-badge').innerHTML = '<i class="fa-solid fa-triangle-exclamation text-amber-400"></i> Solo Texto';
         }
 
-        // Voice Synthesis (Sura Speaks)
+        // ---- Selección de voz (femenina / masculina) ----
+        const normVoiceName = (str) => (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const VOICE_HINTS = {
+            female: ['Mónica', 'Sabina', 'Helena', 'Google español', 'Laura', 'Elvira', 'Dalia', 'Paulina', 'Lucía', 'Elena', 'Salomé', 'Camila'].map(normVoiceName),
+            male:   ['Jorge', 'Diego', 'Carlos', 'Pablo', 'Raúl', 'Álvaro', 'Juan', 'Alonso', 'Gonzalo', 'Tomás'].map(normVoiceName)
+        };
+
+        function pickSpanishVoice(gender) {
+            if (!synth) return null;
+            // Solo voces en español
+            const spanish = synth.getVoices().filter(v => (v.lang || '').toLowerCase().replace('_', '-').startsWith('es'));
+            if (!spanish.length) return null;
+            const matches = (voice, names) => names.some(n => normVoiceName(voice.name).includes(n));
+            const other = gender === 'female' ? 'male' : 'female';
+            return spanish.find(v => matches(v, VOICE_HINTS[gender]))        // una voz con nombre del género pedido
+                || spanish.find(v => !matches(v, VOICE_HINTS[other]))        // si no, una que no sea del otro género
+                || spanish[0];
+        }
+
+        // Las voces se cargan de forma asíncrona en Chrome/Edge: pedirlas pronto las deja listas
+        if (synth) {
+            synth.getVoices();
+            synth.onvoiceschanged = () => synth.getVoices();
+        }
+
+        // Voice Synthesis (bot-n/a Speaks)
         function speakText(text) {
             if (!synth) return;
             synth.cancel(); // Stop any previous speech
 
             const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'es-ES';
+            const voice = pickSpanishVoice(selectedVoiceGender);
+            if (voice) {
+                utterance.voice = voice;
+                utterance.lang = voice.lang;
+            } else {
+                utterance.lang = 'es-ES';
+            }
             utterance.rate = 0.95; // Calm, relaxed tone
-            utterance.pitch = 1.0;
+            utterance.pitch = selectedVoiceGender === 'male' ? 0.85 : 1.2;
 
             utterance.onstart = () => {
                 isSpeaking = true;
-                updateOrbState('speaking', 'Sura está hablando...', 'Escucha la orientación empática.');
+                updateOrbState('speaking', 'bot-n/a está hablando...', 'Escucha la orientación empática.');
             };
 
             utterance.onend = () => {
                 isSpeaking = false;
-                updateOrbState('calm', 'Sura está lista', 'Presiona el micrófono o escribe para conversar.');
+                updateOrbState('calm', 'bot-n/a está listo', 'Presiona el micrófono o escribe para conversar.');
             };
 
             synth.speak(utterance);
+        }
+
+        // ---- Personalización del avatar ----
+        function changeAvatar(iconName) {
+            if (!/^fa-[a-z0-9-]+$/.test(iconName)) return;
+            currentAvatarIcon = iconName;
+
+            // Resaltar el botón elegido
+            const activeClasses = ['border-mint-500', 'bg-mint-500/10', 'text-mint-400'];
+            document.querySelectorAll('[data-avatar]').forEach(btn => {
+                const on = btn.dataset.avatar === iconName;
+                activeClasses.forEach(c => btn.classList.toggle(c, on));
+            });
+
+            // Si el orbe está en reposo, cambiar el ícono ya; si está hablando/escuchando/pensando,
+            // se aplicará al volver al reposo (updateOrbState usa currentAvatarIcon)
+            const orb = document.getElementById('sura-orb');
+            const busy = ['speaking', 'listening', 'thinking'].some(c => orb.classList.contains(c));
+            if (!busy) {
+                document.getElementById('orb-icon').className = 'fa-solid ' + iconName + ' text-3xl text-white/80';
+            }
+        }
+
+        // ---- Modal de líneas de apoyo ----
+        function showHelpModal() {
+            const modal = document.getElementById('help-modal');
+            modal.classList.remove('hidden');
+            const closeBtn = document.getElementById('help-modal-close');
+            if (closeBtn) closeBtn.focus();
+        }
+
+        function closeHelpModal() {
+            document.getElementById('help-modal').classList.add('hidden');
         }
 
         function stopVoice() {
@@ -531,7 +675,7 @@
             if (recognition && isListening) recognition.stop();
             isSpeaking = false;
             isListening = false;
-            updateOrbState('calm', 'Sura está lista', 'Voz detenida.');
+            updateOrbState('calm', 'bot-n/a está listo', 'Voz detenida.');
         }
 
         // Orb Avatar State Controller
@@ -552,7 +696,7 @@
             } else if (state === 'thinking') {
                 icon.className = 'fa-solid fa-rotate text-3xl text-white/90 animate-spin';
             } else {
-                icon.className = 'fa-solid fa-sparkles text-3xl text-white/80';
+                icon.className = 'fa-solid ' + currentAvatarIcon + ' text-3xl text-white/80';
             }
         }
 
@@ -581,7 +725,7 @@
                 return;
             }
 
-            // Cortar la voz de Sura sin tocar el reconocimiento
+            // Cortar la voz de bot-n/a sin tocar el reconocimiento
             if (synth) synth.cancel();
             isSpeaking = false;
 
@@ -658,7 +802,7 @@
 
             appendChatMessage('user', userMsg);
             chatHistory.push({ role: 'user', content: userMsg });
-            updateOrbState('thinking', 'Sura está procesando...', 'Pensando una respuesta para ti...');
+            updateOrbState('thinking', 'bot-n/a está procesando...', 'Pensando una respuesta para ti...');
 
             let reply;
             try {
@@ -677,6 +821,13 @@
                 reply = generateEmpatheticResponse(userMsg);
             }
 
+            // Sistema de alerta: si el modelo marca una crisis, mostrar el botón de ayuda y limpiar la etiqueta
+            if (reply.includes('[ALERTA_AYUDA]')) {
+                reply = reply.replace(/\[ALERTA_AYUDA\]/g, '').trim(); // Limpia la etiqueta
+                document.getElementById('emergency-help-panel').classList.remove('hidden'); // Muestra el botón
+                if (!reply) reply = 'Estoy aquí contigo. Mira el aviso de ayuda que apareció: hay personas que pueden acompañarte ahora mismo.';
+            }
+
             chatHistory.push({ role: 'assistant', content: reply });
             appendChatMessage('sura', reply);
             isWaitingReply = false;
@@ -684,7 +835,7 @@
             if (synth) {
                 speakText(reply);
             } else {
-                updateOrbState('calm', 'Sura está lista', 'Presiona el micrófono o escribe para conversar.');
+                updateOrbState('calm', 'bot-n/a está listo', 'Presiona el micrófono o escribe para conversar.');
             }
         }
 
@@ -712,7 +863,7 @@
                         <i class="fa-solid fa-brain"></i>
                     </div>
                     <div class="bg-slate-700/80 border border-slate-600/50 rounded-2xl rounded-tl-none p-3.5 max-w-[85%] text-sm text-slate-200">
-                        ${text}
+                        ${escapeHtml(text).replace(/\n/g, '<br>')}
                     </div>
                 `;
             }
@@ -740,8 +891,8 @@
             // Crisis: prioridad máxima (también cuando el modelo falla o bloquea la respuesta)
             if (has('suicid', 'quitar la vida', 'quitarme la vida', 'quitarse la vida', 'quitarle la vida', 'terminar con mi vida', 'acabar con mi vida', 'matarme', 'matarse', 'no quiero vivir', 'no quiero seguir viviendo', 'quiero morir', 'quiero morirme', 'morirme', 'hacerme dano', 'hacerse dano', 'lastimarme', 'cortarme las venas', 'acabar con todo', 'mejor muerto', 'mejor muerta', 'desaparecer para siempre', 'no vale la pena vivir')) {
                 return pick([
-                    "Lo que me cuentas es muy importante y me preocupa cómo te sientes. No tienes que pasar por esto en soledad. Por favor, habla ahora mismo con alguien de confianza o comunícate con los servicios de emergencia o la línea de ayuda de tu país. Yo me quedo aquí contigo.",
-                    "Gracias por decírmelo, sé que no es fácil. Tu vida importa. Si estás en peligro o piensas hacerte daño, llama ya a los servicios de emergencia de tu país o busca a alguien cercano que pueda acompañarte ahora. Si quieres, sigo aquí contigo mientras tanto."
+                    "Lo que me cuentas es muy importante y me preocupa cómo te sientes. No tienes que pasar por esto en soledad. Por favor, habla ahora mismo con alguien de confianza o comunícate con los servicios de emergencia o la línea de ayuda de tu país. Yo me quedo aquí contigo. [ALERTA_AYUDA]",
+                    "Gracias por decírmelo, sé que no es fácil. Tu vida importa. Si estás en peligro o piensas hacerte daño, llama ya a los servicios de emergencia de tu país o busca a alguien cercano que pueda acompañarte ahora. Si quieres, sigo aquí contigo mientras tanto. [ALERTA_AYUDA]"
                 ]);
             }
 
@@ -750,7 +901,7 @@
                 return pick([
                     "¡Hola! Me alegra que estés aquí. ¿Cómo te sientes hoy con la universidad?",
                     "Hola, qué bueno verte por aquí. Cuéntame, ¿qué tienes en la cabeza hoy?",
-                    "¡Hola! Estoy lista para escucharte. ¿Qué es lo que más te pesa en este momento?"
+                    "¡Hola! Aquí estoy para escucharte. ¿Qué es lo que más te pesa en este momento?"
                 ]);
             }
 
@@ -763,10 +914,10 @@
                 ]);
             }
 
-            // Preguntas sobre qué puede hacer Sura / cómo ayuda
+            // Preguntas sobre qué puede hacer bot-n/a / cómo ayuda
             if (has('ayudarias', 'ayudas', 'ayudarme', 'puedes hacer', 'que haces', 'como funcionas', 'para que sirves', 'quien eres')) {
                 return pick([
-                    "Soy Sura, tu copiloto de bienestar académico. Puedo escucharte cuando estás desbordado, ayudarte a dividir una entrega enorme en pasos pequeños en el 'Desglose Anti-Caos', y guiarte en una pausa de respiración en el 'Escudo Anti-Burnout'. ¿Por dónde quieres empezar?",
+                    "Soy bot-n/a, del proyecto n/a. Puedo escucharte cuando estás desbordado, ayudarte a dividir una entrega enorme en pasos pequeños en el 'Desglose Anti-Caos', y guiarte en una pausa de respiración en el 'Escudo Anti-Burnout'. ¿Por dónde quieres empezar?",
                     "Te puedo acompañar de tres formas: escucharte sin juzgar, ordenar tus tareas en micro-pasos y guiarte en un ejercicio de respiración para bajar el estrés. ¿Qué necesitas ahora mismo?",
                     "Piensa en mí como alguien que te escucha y te ayuda a ordenar el caos. Cuéntame qué te está agobiando y vemos juntos cuál es el primer paso."
                 ]);
@@ -1017,6 +1168,17 @@
                 }
             });
         }
+
+        // Cambio de voz (femenina / masculina) con una frase de prueba
+        document.getElementById('voice-select').addEventListener('change', (e) => {
+            selectedVoiceGender = e.target.value === 'male' ? 'male' : 'female';
+            speakText('Hola, así sueno ahora.');
+        });
+
+        // Cerrar el modal de ayuda con Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeHelpModal();
+        });
     </script>
 </body>
 </html>
