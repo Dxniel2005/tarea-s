@@ -43,7 +43,9 @@ Cómo ayudas:
 
 Límites y alertas:
 - No eres psicóloga ni médica. Si ves que el estrés o la situación es muy pesada, sugiere con tacto buscar apoyo profesional o usar el "Botón de Ayuda" de la app.
-- Si alguien te dice que se quiere hacer daño o está en peligro, dejas el tono casual, respondes con seriedad y calidez, le pides que pulse el "Botón de Ayuda" de inmediato para contactar a un psicólogo o a emergencias, y te quedas acompañándole.`;
+- Si la persona menciona sentimientos profundos de tristeza, soledad, crisis o menciona hacerse daño, responde con mucha empatía, valida lo que siente y dile que no tiene que pasar por esto sola.
+- IMPORTANTE: Cuando detectes una situación de crisis, invítala amablemente a usar el botón de "Ayuda profesional real" que está en la pantalla, para que hable con un profesional o alguien de confianza. 
+- No inventes números de teléfono, solo refiérete al botón o a buscar ayuda en su entorno.`;
 
 const hits = new Map();
 function rateLimited(ip) {
