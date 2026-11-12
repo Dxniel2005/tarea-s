@@ -179,7 +179,7 @@ const server = http.createServer(async (req, res) => {
     }
 });
 
-server.listen(PORT, '127.0.0.1', () => {
+server.listen(PORT, '0.0.0.0', () => {
     console.log(`Sura AI lista en http://localhost:${PORT}`);
     console.log(`Modelo Gemini: ${MODEL}`);
     console.log('Página:', path.basename(HTML_FILE), fs.existsSync(HTML_FILE) ? '(encontrada)' : '(NO ENCONTRADA: ponla junto a server.js)');
